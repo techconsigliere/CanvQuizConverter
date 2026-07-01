@@ -17,17 +17,15 @@ Canvas admins are also welcome to point faculty at this, host it on a lab machin
 Open a blank Word document and write your quiz like this:
 
 ```
-1. What year did the Titanic sink?
-a. 1898
-*b. 1912
-c. 1923
-d. 1931
+1. Chris' favorite color is:
+*a. Black
+b. Blue
+c. Red
+d. Turquoise
 
-2. Which of these are programming languages? (select all that apply)
-*a. Python
-*b. JavaScript
-c. HTML
-d. Photoshop
+8. Chris is happy to convert your properly-formatted Word document into a quiz or question bank in your Canvas course.
+*a. True
+b. False
 ```
 
 A few rules that matter:
@@ -35,7 +33,7 @@ A few rules that matter:
 - Number each question, period, then the question text: `1. Question text`
 - Each answer choice gets a letter, period, then the choice text: `a. Choice text`
 - Put an asterisk directly before the letter of the correct answer: `*b. Choice text`
-- Mark more than one asterisk on a question and the tool will treat it as a select-all-that-apply question automatically. It'll flag this in the preview so you can confirm that's what you meant.
+- Mark more than one asterisk on a question and the tool will treat it as a multiple answer question automatically. It'll flag this in the preview so you can confirm that's what you meant.
 - Letters can be upper or lowercase. The tool doesn't care.
 
 That's it. No styles, no tables, no special formatting required.
@@ -130,4 +128,4 @@ This isn't a Canvas API integration. It doesn't connect to your course, doesn't 
 
 CanvQuizConverter is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Use it, modify it, redistribute it, fold it into your institution's onboarding materials, whatever you need. All that's asked is attribution back to the original source.
 
-Built by [Chris Powell](https://canvasinsider.blog), Canvas LMS Administrator, from the admin side of the desk. 
+Built by [Chris Powell](https://canvasinsider.blog), Canvas LMS Administrator, from the admin side of the desk.

@@ -58,13 +58,13 @@ You only need to do this once. After that, running the tool is a single command.
 pip3 install streamlit python-docx --break-system-packages
 ```
 
-**4. Download CanvQuizConverter.** Go to the [CanvQuizConverter GitHub page](https://github.com/techconsigliere/CanvQuizConverter), click the green **Code** button, then **Download ZIP**. Unzip it, and you should have a file called `quizconverter.py`. Move it to your Desktop to make the next step easy.
+**4. Download CanvQuizConverter.** Go to the [CanvQuizConverter GitHub page](https://github.com/techconsigliere/CanvQuizConverter), click the green **Code** button, then **Download ZIP**. Unzip it, and you should have a file called `CanvQuizConverter.py`. Move it to your Desktop to make the next step easy.
 
 **5. Run it.** In Terminal:
 
 ```bash
 cd ~/Desktop
-streamlit run quizconverter.py
+streamlit run CanvQuizConverter.py
 ```
 
 Your browser will open automatically with the tool running.
@@ -81,20 +81,20 @@ Your browser will open automatically with the tool running.
 pip install streamlit python-docx
 ```
 
-**4. Download CanvQuizConverter.** Go to the [CanvQuizConverter GitHub page](https://github.com/techconsigliere/CanvQuizConverter), click the green **Code** button, then **Download ZIP**. Unzip it, and you should have a file called `quizconverter.py`. Move it to your Desktop to make the next step easy.
+**4. Download CanvQuizConverter.** Go to the [CanvQuizConverter GitHub page](https://github.com/techconsigliere/CanvQuizConverter), click the green **Code** button, then **Download ZIP**. Unzip it, and you should have a file called `CanvQuizConverter.py`. Move it to your Desktop to make the next step easy.
 
 **5. Run it.** In PowerShell:
 
 ```powershell
 cd ~\Desktop
-streamlit run quizconverter.py
+streamlit run CanvQuizConverter.py
 ```
 
 Your browser will open automatically with the tool running.
 
 ### Every time after that
 
-You don't need to reinstall anything. Just open Terminal (Mac) or PowerShell (Windows), `cd` to wherever `quizconverter.py` lives, and run `streamlit run quizconverter.py` again.
+You don't need to reinstall anything. Just open Terminal (Mac) or PowerShell (Windows), `cd` to wherever `CanvQuizConverter.py` lives, and run `streamlit run CanvQuizConverter.py` again.
 
 To shut it down, click back into that black window and press `Control + C`.
 
@@ -102,10 +102,10 @@ To shut it down, click back into that black window and press `Control + C`.
 
 **macOS: "bad interpreter: ... no such file or directory"**
 
-If `streamlit run quizconverter.py` throws an error like this, your Mac has a broken shortcut, not a broken tool. It usually shows up on managed campus machines after a Python or macOS update moves things around underneath an existing streamlit install. Run this instead:
+If `streamlit run CanvQuizConverter.py` throws an error like this, your Mac has a broken shortcut, not a broken tool. It usually shows up on managed campus machines after a Python or macOS update moves things around underneath an existing streamlit install. Run this instead:
 
 ```bash
-python3 -m streamlit run quizconverter.py
+python3 -m streamlit run CanvQuizConverter.py
 ```
 
 That tells your current Python to load streamlit directly rather than trusting the old shortcut. It'll work every time, standard user rights or not, and there's nothing to fix or reinstall.

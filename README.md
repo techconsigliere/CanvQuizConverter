@@ -126,6 +126,6 @@ This isn't a Canvas API integration. It doesn't connect to your course, doesn't 
 
 ## License
 
-CanvQuizConverter is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Use it, modify it, redistribute it, fold it into your institution's onboarding materials, whatever you need. All that's asked is attribution back to the original source.
+CanvQuizConverter is released under the [MIT License](LICENSE). Use it, modify it, redistribute it, fold it into your campus onboarding materials, whatever you need. Releases before November 2026 were published under CC BY 4.0.
 
 Built by [Chris Powell](https://canvasinsider.blog), Canvas LMS Administrator, from the admin side of the desk.

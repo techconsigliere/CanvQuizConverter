@@ -1,5 +1,6 @@
 import io
 import re
+import secrets
 import xml.etree.ElementTree as ET
 import zipfile
 import streamlit as st
@@ -33,7 +34,7 @@ def parse_docx(uploaded_file):
             cl = c_m.group(2).lower()
             ct = c_m.group(3)
             qnum = curr['num']
-            cid = f"choice_{qnum}_{cl}"
+            cid = f"choice_{len(questions)}_{qnum}_{cl}"
             
             c_dict = {
                 'id': cid, 
@@ -56,7 +57,11 @@ def create_qti_xml(questions, quiz_title):
     attr = {'xmlns': ns_qti, 'xmlns:xsi': ns_xsi}
     qti = ET.Element('questestinterop', attr)
     
-    as_attr = {'ident': 'canvas_export', 'title': quiz_title}
+    # Fresh ids per export. Canvas remembers imported content by ident, so a
+    # fixed id meant a second quiz imported into the same course could land
+    # on top of the first.
+    run = 'cqc_' + secrets.token_hex(8)
+    as_attr = {'ident': run, 'title': quiz_title}
     assessment = ET.SubElement(qti, 'assessment', as_attr)
     
     sec_attr = {'ident': 'root', 'title': 'Main Section'}
@@ -64,7 +69,7 @@ def create_qti_xml(questions, quiz_title):
 
     for q in questions:
         qnum = q['num']
-        it_attr = {'ident': f"q_{qnum}", 'title': f"Q {qnum}"}
+        it_attr = {'ident': f"{run}_q_{qnum}", 'title': f"Q {qnum}"}
         item = ET.SubElement(section, 'item', it_attr)
 
         correct_ids = [c['id'] for c in q['choices'] if c['is_correct']]
